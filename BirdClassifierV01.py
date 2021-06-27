@@ -53,4 +53,5 @@ output = [round(res_raw) for res_raw in y_classifier]
 
 #%% evaluate predictions
 res_accuracy = accuracy_score(y_test, output)
-print("Accuracy: %.2f%%" % (res_accuracy * 100))
+print('accuracy pct: '+str(res_accuracy * 100))
+
