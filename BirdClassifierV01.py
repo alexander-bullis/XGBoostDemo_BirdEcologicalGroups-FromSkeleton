@@ -43,7 +43,7 @@ Y = pd.Categorical(Y_txt, categories=Y_txt.unique()).codes
 #split dataset to training and test datasets
 X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.25, random_state=5)
 
-#fit model no training data
+#fit model to training data
 xgbmodel = XGBClassifier(booster='gbtree',silent = 1)
 xgbmodel.fit(X_train, y_train)
 
