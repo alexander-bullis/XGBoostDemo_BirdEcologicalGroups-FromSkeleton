@@ -48,7 +48,7 @@ xgbmodel = XGBClassifier(booster='gbtree',silent = 1)
 xgbmodel.fit(X_train, y_train)
 
 #make predictions for test data, rounding to nearest whole integer
-y_classifier = model.predict(X_test)
+y_classifier = xgbmodel.predict(X_test)
 output = [round(res_raw) for res_raw in y_classifier]
 
 #%% evaluate predictions
